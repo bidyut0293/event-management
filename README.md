@@ -115,7 +115,7 @@ Register a new user.
 **Response `201`:**
 ```json
 {
-  "message": "Registration successful. Check your email.",
+  "message": "User registered successfully",
   "userId": "uuid-v4"
 }
 ```
@@ -209,7 +209,7 @@ Create a new event. **Organizer role required.**
 **Response `201`:**
 ```json
 {
-  "message": "Event created.",
+  "message": "Event created",
   "event": { "id": "uuid", "title": "Vue.js Meetup", "..." }
 }
 ```
@@ -233,7 +233,7 @@ Update an existing event. **Organizer who created the event only.**
 **Response `200`:**
 ```json
 {
-  "message": "Event updated.",
+  "message": "Event updated",
   "event": { "..." }
 }
 ```
@@ -248,7 +248,7 @@ Delete an event. **Organizer who created the event only.**
 
 **Response `200`:**
 ```json
-{ "message": "Event deleted." }
+{ "message": "Event deleted" }
 ```
 
 **Errors:** `403` not the organizer, `404` event not found.
@@ -261,7 +261,7 @@ Register the authenticated user for an event.
 
 **Response `200`:**
 ```json
-{ "message": "Successfully registered for the event. A confirmation email has been sent." }
+{ "message": "Successfully registered for event" }
 ```
 
 **Errors:** `404` event not found, `409` already registered.
@@ -389,5 +389,5 @@ EMAIL_FROM=no-reply@eventplatform.com
 | POST /events | Yes | organizer |
 | PUT /events/:id | Yes | organizer (owner) |
 | DELETE /events/:id | Yes | organizer (owner) |
-| POST /events/:id/register | Yes | attendee |
+| POST /events/:id/register | Yes | any |
 # event-management
