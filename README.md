@@ -390,3 +390,4 @@ EMAIL_FROM=no-reply@eventplatform.com
 | PUT /events/:id | Yes | organizer (owner) |
 | DELETE /events/:id | Yes | organizer (owner) |
 | POST /events/:id/register | Yes | attendee |
+# event-management
