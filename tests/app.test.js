@@ -2,6 +2,11 @@ const request = require('supertest');
 const app = require('../src/index');
 const store = require('../src/store/inMemoryStore');
 
+jest.mock('../src/services/emailService', () => ({
+  sendWelcomeEmail: jest.fn().mockResolvedValue(undefined),
+  sendEventConfirmation: jest.fn().mockResolvedValue(undefined),
+}));
+
 beforeEach(() => {
   store.users.length = 0;
   store.events.length = 0;
