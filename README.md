@@ -390,4 +390,16 @@ EMAIL_FROM=no-reply@eventplatform.com
 | PUT /events/:id | Yes | organizer (owner) |
 | DELETE /events/:id | Yes | organizer (owner) |
 | POST /events/:id/register | Yes | any |
-# event-management
+
+---
+
+## Live Demo
+
+**API Base URL:** https://event-management-it33.onrender.com
+
+| URL | Opens in browser |
+|-----|-----------------|
+| `GET /` | Yes — shows API info |
+| All other routes | Requires Postman or curl |
+
+See [testing.md](testing.md) for full manual testing guide with step-by-step curl/Postman instructions.
